@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lender Company Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="intro">
+        <h2>Welcome to the Paygeon Lender Company Database!</h2>
+        <button class="btn" onclick="beginApplication()">Begin Application</button>
+    </div>
+    <div class="container hidden" id="form-container">
+        <div id="question-1" class="question active">
+            <h3>Lender Company Name</h3>
+            <input type="text" id="lender-name" required>
+            <div id="warning-1" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="nextQuestion(1)">Next</button>
+            </div>
+        </div>
+        <div id="question-2" class="question">
+            <h3>Company Logo</h3>
+            <input type="file" id="lender-logo" accept="image/*">
+            <div id="warning-2" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(2)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(2)">Next</button>
+            </div>
+        </div>
+        <div id="question-3" class="question">
+            <h3>Email</h3>
+            <input type="email" id="lender-email" required>
+            <div id="warning-3" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(3)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(3)">Next</button>
+            </div>
+        </div>
+        <div id="question-4" class="question">
+            <h3>Preferred Borrower Industry</h3>
+            <input type="text" id="borrower-industry" required>
+            <div id="warning-4" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(4)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(4)">Next</button>
+            </div>
+        </div>
+        <div id="question-5" class="question">
+            <h3>Restricted Industries</h3>
+            <input type="text" id="restricted-industries" required>
+            <div id="warning-5" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(5)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(5)">Next</button>
+            </div>
+        </div>
+        <div id="question-6" class="question">
+            <h3>Type of Loans Offered</h3>
+            <input type="text" id="loan-types" required>
+            <div id="warning-6" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(6)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(6)">Next</button>
+            </div>
+        </div>
+        <div id="question-7" class="question">
+            <h3>Minimum Credit Score</h3>
+            <input type="number" id="min-credit-score" required>
+            <div id="warning-7" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(7)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(7)">Next</button>
+            </div>
+        </div>
+        <div id="question-8" class="question">
+            <h3>Minimum Bank Balance</h3>
+            <input type="number" id="min-bank-balance" required>
+            <div id="warning-8" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(8)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(8)">Next</button>
+            </div>
+        </div>
+        <div id="question-9" class="question">
+            <h3>Number of Negative Days Allowed</h3>
+            <input type="number" id="negative-days" required>
+            <div id="warning-9" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(9)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(9)">Next</button>
+            </div>
+        </div>
+        <div id="question-10" class="question">
+            <h3>Monthly Recurring Revenue (MRR)</h3>
+            <input type="number" id="mrr" required>
+            <div id="warning-10" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(10)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(10)">Next</button>
+            </div>
+        </div>
+        <div id="question-11" class="question">
+            <h3>Time in Business</h3>
+            <input type="number" id="time-in-business" required>
+            <div id="warning-11" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(11)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(11)">Next</button>
+            </div>
+        </div>
+        <div id="question-12" class="question">
+            <h3>Specific Loan Criteria</h3>
+            <textarea id="loan-criteria" required></textarea>
+            <div id="warning-12" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(12)">Go Back</button>
+                <button class="btn" onclick="nextQuestion(12)">Next</button>
+            </div>
+        </div>
+        <div id="question-13" class="question">
+            <h3>Additional Comments</h3>
+            <textarea id="additional-comments"></textarea>
+            <div id="warning-13" class="warning">This field is required.</div>
+            <div class="nav-buttons">
+                <button class="btn" onclick="previousQuestion(13)">Go Back</button>
+                <button class="btn" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
